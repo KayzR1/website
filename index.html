@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,7 +16,7 @@
     (function () {
       var d = document.documentElement, t;
       try { t = localStorage.getItem("theme"); } catch (e) {}
-      d.setAttribute("data-theme", t === "dark" ? "dark" : "light");
+      d.setAttribute("data-theme", t === "light" ? "light" : "dark");
       d.classList.add("js");
     })();
   </script>
@@ -138,7 +138,7 @@
     </div>
         <ul class="grid shelf">
       <li class="rise">
-        <div class="cover" style="--c:#c9573f;--ink:#fbeee6">
+        <div class="cover" style="--c:#a6452f;--ink:#f6e6dc">
           <span class="ca">No. 01</span>
           <div>
             <span class="ct">Book One</span>
@@ -149,7 +149,7 @@
         <div class="under"><span class="t">Book One</span><span class="mono muted">—</span></div>
       </li>
       <li class="rise">
-        <div class="cover" style="--c:#e7e0cf;--ink:#1b1b1b">
+        <div class="cover" style="--c:#cfc6b0;--ink:#1b1b1b">
           <span class="ca">No. 02</span>
           <div>
             <span class="ct">Book Two</span>

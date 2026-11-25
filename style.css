@@ -2,6 +2,18 @@
    Tokens
    ========================================================================== */
 :root,
+:root[data-theme="dark"] {
+    --bg: #0c0c0c;
+    --fg: #ececea;
+    --muted: #8f8f8b;
+    --faint: #5c5c59;
+    --line: #232323;
+    --tile: #161616;
+    --editor: #0a0a0a;
+    --editor-edge: rgba(255, 255, 255, 0.08);
+    color-scheme: dark;
+}
+
 :root[data-theme="light"] {
     --bg: #f4f4f2;
     --fg: #111111;
@@ -9,19 +21,9 @@
     --faint: #a3a3a0;
     --line: #dcdcd8;
     --tile: #e6e6e2;
-    --ok: #1f9d55;
+    --editor: #141414;
+    --editor-edge: rgba(255, 255, 255, 0.04);
     color-scheme: light;
-}
-
-:root[data-theme="dark"] {
-    --bg: #0e0e0e;
-    --fg: #ececea;
-    --muted: #8f8f8b;
-    --faint: #5c5c59;
-    --line: #262626;
-    --tile: #181818;
-    --ok: #3ccf7c;
-    color-scheme: dark;
 }
 
 :root {
@@ -322,10 +324,10 @@ main {
 
 .editor {
     width: 78%;
-    background: #141414;
+    background: var(--editor);
     color: #e8e8e8;
     border-radius: 7px;
-    box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.04);
+    box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--editor-edge);
     overflow: hidden;
     transition: transform 0.8s var(--ease);
 }

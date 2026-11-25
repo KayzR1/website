@@ -37,7 +37,7 @@
     applyTheme(next);
     try { localStorage.setItem("theme", next); } catch (e) {}
   }
-  applyTheme(root.getAttribute("data-theme") || "light");
+  applyTheme(root.getAttribute("data-theme") || "dark");
   if (toggle) toggle.addEventListener("click", flipTheme);
 
   /* ---- Counts & year ------------------------------------------------- */
