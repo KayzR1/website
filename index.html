@@ -1,128 +1,274 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kartavya Hirani</title>
   <meta name="description" content="Kartavya Hirani — developer. Projects, books, movies and thoughts." />
-  <meta name="theme-color" content="#09090a" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500&family=Geist+Mono:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&amp;display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&amp;display=swap" />
   <link rel="stylesheet" href="style.css" />
   <script>
     (function () {
       var d = document.documentElement, t;
       try { t = localStorage.getItem("theme"); } catch (e) {}
-      d.setAttribute("data-theme", t === "light" ? "light" : "dark");
+      d.setAttribute("data-theme", t === "dark" ? "dark" : "light");
       d.classList.add("js");
     })();
   </script>
-  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <div class="grain" aria-hidden="true"></div>
 
   <header class="site-header">
-    <div class="wrap bar">
-      <a class="brand" href="index.html" aria-current="page">Kartavya <em>Hirani</em></a>
+    <div class="wrap grid bar">
+      <a class="brand" href="index.html">Kartavya Hirani</a>
+      <span class="role">Developer</span>
+      <span class="clock-wrap" data-clock aria-label="Local time"></span>
       <nav class="nav" aria-label="Primary">
         <a href="projects.html">Projects</a>
         <a href="books.html">Books</a>
         <a href="movies.html">Movies</a>
         <a href="thoughts.html">Thoughts</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"></button>
       </nav>
-      <div class="bar-meta">
-        <span class="clock" data-clock aria-label="Local time"></span>
-        <button class="theme-toggle" type="button" data-theme-toggle>Light</button>
-      </div>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero">
-      <div class="hero-light" aria-hidden="true"></div>
-      <div class="wrap hero-inner">
-        <p class="kicker intro" style="--d:700ms">
-          <span class="mono">~/kartavya — developer</span>
-          Building things in code, and collecting the books, films and ideas that shape them.
-        </p>
-        <h1 class="display">
-          <span class="l1 intro" style="--d:100ms">Kartavya</span>
-          <span class="l2 intro" style="--d:280ms">Hirani</span>
-        </h1>
-        <div class="hero-foot intro" style="--d:900ms">
-          <span>Portfolio &amp; notebook</span>
-          <span class="scroll-cue"><i aria-hidden="true"></i>Scroll</span>
-          <span class="hide-sm" data-clock></span>
-        </div>
-      </div>
-    </section>
-
-    <section class="statement">
-      <div class="wrap">
-        <span class="label reveal">Hello</span>
-        <p class="big" data-words>
+    <section class="wrap hero" id="top">
+      <h1 class="name" data-fit>Kartavya Hirani</h1>
+      <div class="grid hero-info">
+        <p class="intro rise" style="--d:250ms">
           Welcome, I’m glad you found your way here.
           Maybe you came looking for something specific, or maybe you just wandered in.
           Either way, I hope you leave with something that stays with you.
         </p>
+        <dl class="spec rise" style="--d:350ms">
+          <dt>Role</dt><dd>Developer</dd>
+          <dt>Focus</dt><dd>Building things</dd>
+          <dt>Status</dt><dd><span class="dot" aria-hidden="true"></span>Open to projects</dd>
+          <dt>Local</dt><dd class="mono" data-clock></dd>
+        </dl>
+        <ul class="links rise" style="--d:450ms">
+          <li class="label">Elsewhere</li>
+          <li><a class="u" href="#">Email ↗</a></li>
+          <li><a class="u" href="#">LinkedIn ↗</a></li>
+          <li><a class="u" href="#">GitHub ↗</a></li>
+        </ul>
       </div>
     </section>
 
-    <div class="wrap">
-      <section class="section" aria-labelledby="contents-label">
-        <div class="section-head reveal">
-          <span class="label" id="contents-label">Contents</span>
-          <span class="label">04 chapters</span>
+    <section class="wrap block">
+    <div class="block-head grid rise">
+      <span class="idx label">(01)</span>
+      <h2>Projects</h2>
+      <p class="blurb">Things I’ve built.</p>
+      <a class="more u mono" href="projects.html">All projects →</a>
+    </div>
+      <ul class="grid tiles">
+      <li class="rise">
+        <a class="tile" href="#">
+          <div class="shot">
+          <div class="editor" aria-hidden="true">
+            <div class="ed-bar"><i></i><i></i><i></i><span>project-one/src/main.ts</span></div>
+            <div class="ed-body">
+              <span class="ln" style="--in:0"><b>1</b><s class="k" style="--w:25%"></s><s class="v" style="--w:16%"></s></span>
+              <span class="ln" style="--in:0"><b>2</b><s class="c" style="--w:14%"></s></span>
+              <span class="ln" style="--in:0"><b>3</b><s class="f" style="--w:28%"></s></span>
+              <span class="ln" style="--in:1"><b>4</b><s class="" style="--w:19%"></s><s class="k" style="--w:22%"></s></span>
+              <span class="ln" style="--in:1"><b>5</b><s class="v" style="--w:10%"></s><s class="f" style="--w:13%"></s></span>
+              <span class="ln" style="--in:1"><b>6</b></span>
+              <span class="ln" style="--in:0"><b>7</b><s class="f" style="--w:19%"></s><s class="c" style="--w:18%"></s></span>
+              <span class="ln" style="--in:0"><b>8</b><s class="v" style="--w:19%"></s><s class="f" style="--w:13%"></s></span>
+              <span class="ln" style="--in:1"><b>9</b><s class="f" style="--w:21%"></s></span>
+              <span class="ln" style="--in:1"><b>10</b><s class="" style="--w:12%"></s></span>
+              <span class="ln" style="--in:1"><b>11</b></span>
+              <span class="ln" style="--in:0"><b>12</b><s class="k" style="--w:28%"></s><s class="k" style="--w:27%"></s><s class="k" style="--w:17%"></s></span>
+            </div>
+          </div>
+          </div>
+          <div class="cap">
+            <span class="file mono">01_PROJECT_ONE.PNG</span>
+            <span class="t">Project One</span>
+            <span class="y mono">2025</span>
+            <span class="d">Description</span>
+            <span class="tags"><span class="tag">Stack</span><span class="tag">Stack</span></span>
+          </div>
+        </a>
+      </li>
+      <li class="rise">
+        <a class="tile" href="#">
+          <div class="shot">
+          <div class="editor" aria-hidden="true">
+            <div class="ed-bar"><i></i><i></i><i></i><span>project-two/app/index.py</span></div>
+            <div class="ed-body">
+              <span class="ln" style="--in:0"><b>1</b><s class="f" style="--w:18%"></s></span>
+              <span class="ln" style="--in:0"><b>2</b><s class="" style="--w:25%"></s><s class="f" style="--w:21%"></s><s class="" style="--w:18%"></s></span>
+              <span class="ln" style="--in:0"><b>3</b><s class="f" style="--w:17%"></s><s class="f" style="--w:21%"></s><s class="f" style="--w:10%"></s></span>
+              <span class="ln" style="--in:1"><b>4</b><s class="k" style="--w:23%"></s><s class="c" style="--w:9%"></s></span>
+              <span class="ln" style="--in:1"><b>5</b><s class="v" style="--w:20%"></s><s class="" style="--w:14%"></s></span>
+              <span class="ln" style="--in:1"><b>6</b></span>
+              <span class="ln" style="--in:0"><b>7</b><s class="c" style="--w:10%"></s><s class="k" style="--w:27%"></s></span>
+              <span class="ln" style="--in:0"><b>8</b><s class="k" style="--w:28%"></s></span>
+              <span class="ln" style="--in:1"><b>9</b><s class="f" style="--w:24%"></s></span>
+              <span class="ln" style="--in:1"><b>10</b><s class="f" style="--w:9%"></s><s class="k" style="--w:15%"></s></span>
+              <span class="ln" style="--in:1"><b>11</b></span>
+              <span class="ln" style="--in:0"><b>12</b><s class="f" style="--w:9%"></s></span>
+            </div>
+          </div>
+          </div>
+          <div class="cap">
+            <span class="file mono">02_PROJECT_TWO.PNG</span>
+            <span class="t">Project Two</span>
+            <span class="y mono">2025</span>
+            <span class="d">Description</span>
+            <span class="tags"><span class="tag">Stack</span><span class="tag">Stack</span></span>
+          </div>
+        </a>
+      </li>
+      </ul>
+    </section>
+
+    <div class="wrap grid split">
+      <section class="block">
+    <div class="block-head grid rise">
+      <span class="idx label">(02)</span>
+      <h2>Books</h2>
+      <p class="blurb">What I’ve been reading.</p>
+      <a class="more u mono" href="books.html">Bookshelf →</a>
+    </div>
+        <ul class="grid shelf">
+      <li class="rise">
+        <div class="cover" style="--c:#c9573f;--ink:#fbeee6">
+          <span class="ca">No. 01</span>
+          <div>
+            <span class="ct">Book One</span>
+            <div class="rule"></div>
+            <span class="ca">Author —</span>
+          </div>
         </div>
-        <ol class="rows">
-          <li class="row reveal">
-            <span class="n">I.</span>
-            <a class="t stretch" href="projects.html">Projects<span class="arrow" aria-hidden="true">↗</span></a>
-            <span class="side"><span class="d">Things I’ve built.</span><span class="m">02 entries</span></span>
-          </li>
-          <li class="row reveal">
-            <span class="n">II.</span>
-            <a class="t stretch" href="books.html">Books<span class="arrow" aria-hidden="true">↗</span></a>
-            <span class="side"><span class="d">What I’ve been reading.</span><span class="m">03 entries</span></span>
-          </li>
-          <li class="row reveal">
-            <span class="n">III.</span>
-            <a class="t stretch" href="movies.html">Movies<span class="arrow" aria-hidden="true">↗</span></a>
-            <span class="side"><span class="d">Movies that stuck with me after the credits rolled.</span><span class="m">03 entries</span></span>
-          </li>
-          <li class="row reveal">
-            <span class="n">IV.</span>
-            <a class="t stretch" href="thoughts.html">Thoughts<span class="arrow" aria-hidden="true">↗</span></a>
-            <span class="side"><span class="d">Notes, reflections, and half-finished ideas.</span><span class="m">02 entries</span></span>
-          </li>
-        </ol>
+        <div class="under"><span class="t">Book One</span><span class="mono muted">—</span></div>
+      </li>
+      <li class="rise">
+        <div class="cover" style="--c:#e7e0cf;--ink:#1b1b1b">
+          <span class="ca">No. 02</span>
+          <div>
+            <span class="ct">Book Two</span>
+            <div class="rule"></div>
+            <span class="ca">Author —</span>
+          </div>
+        </div>
+        <div class="under"><span class="t">Book Two</span><span class="mono muted">—</span></div>
+      </li>
+      <li class="rise">
+        <div class="cover" style="--c:#24344f;--ink:#e9edf5">
+          <span class="ca">No. 03</span>
+          <div>
+            <span class="ct">Book Three</span>
+            <div class="rule"></div>
+            <span class="ca">Author —</span>
+          </div>
+        </div>
+        <div class="under"><span class="t">Book Three</span><span class="mono muted">—</span></div>
+      </li>
+        </ul>
+      </section>
+      <section class="block">
+    <div class="block-head grid rise">
+      <span class="idx label">(03)</span>
+      <h2>Movies</h2>
+      <p class="blurb">Movies that stuck with me after the credits rolled.</p>
+      <a class="more u mono" href="movies.html">Watchlist →</a>
+    </div>
+        <ul class="grid shelf">
+      <li class="rise">
+        <div class="poster" style="--c:#151515">
+          <div class="pm"><span>01</span><span>Feature</span></div>
+          <div>
+            <span class="pt">Movie One</span>
+            <div class="pm" style="margin-top:.6rem"><span>Dir. —</span><span>—</span></div>
+          </div>
+        </div>
+        <div class="under"><span class="t">Movie One</span><span class="mono muted">—</span></div>
+      </li>
+      <li class="rise">
+        <div class="poster" style="--c:#3b2620">
+          <div class="pm"><span>02</span><span>Feature</span></div>
+          <div>
+            <span class="pt">Movie Two</span>
+            <div class="pm" style="margin-top:.6rem"><span>Dir. —</span><span>—</span></div>
+          </div>
+        </div>
+        <div class="under"><span class="t">Movie Two</span><span class="mono muted">—</span></div>
+      </li>
+      <li class="rise">
+        <div class="poster" style="--c:#1b2e2c">
+          <div class="pm"><span>03</span><span>Feature</span></div>
+          <div>
+            <span class="pt">Movie Three</span>
+            <div class="pm" style="margin-top:.6rem"><span>Dir. —</span><span>—</span></div>
+          </div>
+        </div>
+        <div class="under"><span class="t">Movie Three</span><span class="mono muted">—</span></div>
+      </li>
+        </ul>
       </section>
     </div>
+
+    <section class="wrap block">
+    <div class="block-head grid rise">
+      <span class="idx label">(04)</span>
+      <h2>Thoughts</h2>
+      <p class="blurb">Notes, reflections, and half-finished ideas.</p>
+      <a class="more u mono" href="thoughts.html">All notes →</a>
+    </div>
+      <ul class="list">
+      <li class="entry grid rise">
+        <span class="date mono">2025.11</span>
+        <span class="t">The Value of Curiosity</span>
+        <span class="ex">Most people chase answers, but curiosity is about finding better questions. Sometimes the process of wondering is the point.</span>
+        <span class="go" aria-hidden="true">→</span>
+      </li>
+      <li class="entry grid rise">
+        <span class="date mono">2025.10</span>
+        <span class="t">Why I Like Building Things</span>
+        <span class="ex">Making something from scratch is a kind of clarity — it forces you to translate thought into form. That’s why I keep building.</span>
+        <span class="go" aria-hidden="true">→</span>
+      </li>
+      </ul>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <span class="label reveal">Get in touch</span>
-      <ul class="reach">
-        <li class="reveal"><a href="#">Email<sup>↗</sup></a></li>
-        <li class="reveal"><a href="#">LinkedIn<sup>↗</sup></a></li>
-        <li class="reveal"><a href="#">GitHub<sup>↗</sup></a></li>
+    <div class="wrap grid foot">
+      <p class="big">Have an idea, a book or a film to recommend? <a href="#">Say hello ↗</a></p>
+      <ul class="col">
+        <li class="label">Elsewhere</li>
+        <li><a class="u" href="#">Email</a></li>
+        <li><a class="u" href="#">LinkedIn</a></li>
+        <li><a class="u" href="#">GitHub</a></li>
       </ul>
-      <div class="foot-base">
+      <ul class="col">
+        <li class="label">Index</li>
+        <li><a class="u" href="projects.html">Projects</a></li>
+        <li><a class="u" href="books.html">Books</a></li>
+        <li><a class="u" href="movies.html">Movies</a></li>
+        <li><a class="u" href="thoughts.html">Thoughts</a></li>
+      </ul>
+      <ul class="col">
+        <li class="label">Colophon</li>
+        <li>Hand-written HTML, CSS &amp; JS</li>
+        <li>Set in Switzer &amp; Geist Mono</li>
+      </ul>
+      <div class="foot-base mono">
         <span>© <span data-year>2026</span> Kartavya Hirani</span>
-        <nav aria-label="Footer">
-          <a href="index.html">Home</a>
-          <a href="projects.html">Projects</a>
-          <a href="books.html">Books</a>
-          <a href="movies.html">Movies</a>
-          <a href="thoughts.html">Thoughts</a>
-        </nav>
-        <span>Hand-written HTML, CSS &amp; JS · <kbd>T</kbd> theme</span>
+        <a class="u" href="#top">Back to top ↑</a>
       </div>
     </div>
   </footer>

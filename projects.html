@@ -1,102 +1,143 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects — Kartavya Hirani</title>
   <meta name="description" content="Projects built by Kartavya Hirani." />
-  <meta name="theme-color" content="#09090a" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500&family=Geist+Mono:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&amp;display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&amp;display=swap" />
   <link rel="stylesheet" href="style.css" />
   <script>
     (function () {
       var d = document.documentElement, t;
       try { t = localStorage.getItem("theme"); } catch (e) {}
-      d.setAttribute("data-theme", t === "light" ? "light" : "dark");
+      d.setAttribute("data-theme", t === "dark" ? "dark" : "light");
       d.classList.add("js");
     })();
   </script>
-  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <div class="grain" aria-hidden="true"></div>
 
   <header class="site-header">
-    <div class="wrap bar">
-      <a class="brand" href="index.html">Kartavya <em>Hirani</em></a>
+    <div class="wrap grid bar">
+      <a class="brand" href="index.html">Kartavya Hirani</a>
+      <span class="role">Developer</span>
+      <span class="clock-wrap" data-clock aria-label="Local time"></span>
       <nav class="nav" aria-label="Primary">
         <a href="projects.html" aria-current="page">Projects</a>
         <a href="books.html">Books</a>
         <a href="movies.html">Movies</a>
         <a href="thoughts.html">Thoughts</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"></button>
       </nav>
-      <div class="bar-meta">
-        <span class="clock" data-clock aria-label="Local time"></span>
-        <button class="theme-toggle" type="button" data-theme-toggle>Light</button>
-      </div>
     </div>
   </header>
 
   <main id="main">
-    <section class="page-head">
-      <div class="hero-light" aria-hidden="true"></div>
-      <div class="wrap">
-        <p class="crumb intro"><a href="index.html">~</a>/projects</p>
-        <h1 class="title intro" style="--d:140ms">Projects<span class="count" data-count>00</span></h1>
-        <p class="lede intro" style="--d:360ms">Things I’ve built.</p>
-      </div>
+    <section class="wrap grid page-head">
+      <span class="idx label rise">(01) — Index / Projects</span>
+      <h1 class="rise" style="--d:80ms">Projects</h1>
+      <p class="blurb rise" style="--d:160ms">Things I’ve built.</p>
+      <span class="count label rise" data-count style="--d:200ms"></span>
     </section>
-    <div class="wrap">
 
-      <section class="section">
-        <div class="section-head reveal"><span class="label">Selected work</span><span class="label">Newest first</span></div>
-        <ol class="rows entries">
-          <li class="row reveal">
-            <span class="n">I.</span>
-            <a class="t stretch" href="#">Project One<span class="arrow" aria-hidden="true">↗</span></a>
-            <span class="side">
-              <span class="d">Description</span>
-              <span class="tags"><span class="tag">stack</span><span class="tag">stack</span></span>
-              <span class="m">View more</span>
-            </span>
-          </li>
-          <li class="row reveal">
-            <span class="n">II.</span>
-            <a class="t stretch" href="#">Project Two<span class="arrow" aria-hidden="true">↗</span></a>
-            <span class="side">
-              <span class="d">Description</span>
-              <span class="tags"><span class="tag">stack</span><span class="tag">stack</span></span>
-              <span class="m">View more</span>
-            </span>
-          </li>
-        </ol>
-      </section>
-    </div>
+    <section class="wrap block">
+      <ul class="grid tiles" data-entries>
+      <li class="rise">
+        <a class="tile" href="#">
+          <div class="shot">
+          <div class="editor" aria-hidden="true">
+            <div class="ed-bar"><i></i><i></i><i></i><span>project-one/src/main.ts</span></div>
+            <div class="ed-body">
+              <span class="ln" style="--in:0"><b>1</b><s class="k" style="--w:25%"></s><s class="v" style="--w:16%"></s></span>
+              <span class="ln" style="--in:0"><b>2</b><s class="c" style="--w:14%"></s></span>
+              <span class="ln" style="--in:0"><b>3</b><s class="f" style="--w:28%"></s></span>
+              <span class="ln" style="--in:1"><b>4</b><s class="" style="--w:19%"></s><s class="k" style="--w:22%"></s></span>
+              <span class="ln" style="--in:1"><b>5</b><s class="v" style="--w:10%"></s><s class="f" style="--w:13%"></s></span>
+              <span class="ln" style="--in:1"><b>6</b></span>
+              <span class="ln" style="--in:0"><b>7</b><s class="f" style="--w:19%"></s><s class="c" style="--w:18%"></s></span>
+              <span class="ln" style="--in:0"><b>8</b><s class="v" style="--w:19%"></s><s class="f" style="--w:13%"></s></span>
+              <span class="ln" style="--in:1"><b>9</b><s class="f" style="--w:21%"></s></span>
+              <span class="ln" style="--in:1"><b>10</b><s class="" style="--w:12%"></s></span>
+              <span class="ln" style="--in:1"><b>11</b></span>
+              <span class="ln" style="--in:0"><b>12</b><s class="k" style="--w:28%"></s><s class="k" style="--w:27%"></s><s class="k" style="--w:17%"></s></span>
+            </div>
+          </div>
+          </div>
+          <div class="cap">
+            <span class="file mono">01_PROJECT_ONE.PNG</span>
+            <span class="t">Project One</span>
+            <span class="y mono">2025</span>
+            <span class="d">Description</span>
+            <span class="tags"><span class="tag">Stack</span><span class="tag">Stack</span></span>
+          </div>
+        </a>
+      </li>
+      <li class="rise">
+        <a class="tile" href="#">
+          <div class="shot">
+          <div class="editor" aria-hidden="true">
+            <div class="ed-bar"><i></i><i></i><i></i><span>project-two/app/index.py</span></div>
+            <div class="ed-body">
+              <span class="ln" style="--in:0"><b>1</b><s class="f" style="--w:18%"></s></span>
+              <span class="ln" style="--in:0"><b>2</b><s class="" style="--w:25%"></s><s class="f" style="--w:21%"></s><s class="" style="--w:18%"></s></span>
+              <span class="ln" style="--in:0"><b>3</b><s class="f" style="--w:17%"></s><s class="f" style="--w:21%"></s><s class="f" style="--w:10%"></s></span>
+              <span class="ln" style="--in:1"><b>4</b><s class="k" style="--w:23%"></s><s class="c" style="--w:9%"></s></span>
+              <span class="ln" style="--in:1"><b>5</b><s class="v" style="--w:20%"></s><s class="" style="--w:14%"></s></span>
+              <span class="ln" style="--in:1"><b>6</b></span>
+              <span class="ln" style="--in:0"><b>7</b><s class="c" style="--w:10%"></s><s class="k" style="--w:27%"></s></span>
+              <span class="ln" style="--in:0"><b>8</b><s class="k" style="--w:28%"></s></span>
+              <span class="ln" style="--in:1"><b>9</b><s class="f" style="--w:24%"></s></span>
+              <span class="ln" style="--in:1"><b>10</b><s class="f" style="--w:9%"></s><s class="k" style="--w:15%"></s></span>
+              <span class="ln" style="--in:1"><b>11</b></span>
+              <span class="ln" style="--in:0"><b>12</b><s class="f" style="--w:9%"></s></span>
+            </div>
+          </div>
+          </div>
+          <div class="cap">
+            <span class="file mono">02_PROJECT_TWO.PNG</span>
+            <span class="t">Project Two</span>
+            <span class="y mono">2025</span>
+            <span class="d">Description</span>
+            <span class="tags"><span class="tag">Stack</span><span class="tag">Stack</span></span>
+          </div>
+        </a>
+      </li>
+      </ul>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <span class="label reveal">Get in touch</span>
-      <ul class="reach">
-        <li class="reveal"><a href="#">Email<sup>↗</sup></a></li>
-        <li class="reveal"><a href="#">LinkedIn<sup>↗</sup></a></li>
-        <li class="reveal"><a href="#">GitHub<sup>↗</sup></a></li>
+    <div class="wrap grid foot">
+      <p class="big">Have an idea, a book or a film to recommend? <a href="#">Say hello ↗</a></p>
+      <ul class="col">
+        <li class="label">Elsewhere</li>
+        <li><a class="u" href="#">Email</a></li>
+        <li><a class="u" href="#">LinkedIn</a></li>
+        <li><a class="u" href="#">GitHub</a></li>
       </ul>
-      <div class="foot-base">
+      <ul class="col">
+        <li class="label">Index</li>
+        <li><a class="u" href="projects.html">Projects</a></li>
+        <li><a class="u" href="books.html">Books</a></li>
+        <li><a class="u" href="movies.html">Movies</a></li>
+        <li><a class="u" href="thoughts.html">Thoughts</a></li>
+      </ul>
+      <ul class="col">
+        <li class="label">Colophon</li>
+        <li>Hand-written HTML, CSS &amp; JS</li>
+        <li>Set in Switzer &amp; Geist Mono</li>
+      </ul>
+      <div class="foot-base mono">
         <span>© <span data-year>2026</span> Kartavya Hirani</span>
-        <nav aria-label="Footer">
-          <a href="index.html">Home</a>
-          <a href="projects.html">Projects</a>
-          <a href="books.html">Books</a>
-          <a href="movies.html">Movies</a>
-          <a href="thoughts.html">Thoughts</a>
-        </nav>
-        <span>Hand-written HTML, CSS &amp; JS · <kbd>T</kbd> theme</span>
+        <a class="u" href="#top">Back to top ↑</a>
       </div>
     </div>
   </footer>

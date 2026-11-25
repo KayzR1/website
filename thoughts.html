@@ -1,95 +1,96 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Thoughts — Kartavya Hirani</title>
   <meta name="description" content="Notes, reflections, and half-finished ideas by Kartavya Hirani." />
-  <meta name="theme-color" content="#09090a" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500&family=Geist+Mono:wght@400&display=swap" />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&amp;display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&amp;display=swap" />
   <link rel="stylesheet" href="style.css" />
   <script>
     (function () {
       var d = document.documentElement, t;
       try { t = localStorage.getItem("theme"); } catch (e) {}
-      d.setAttribute("data-theme", t === "light" ? "light" : "dark");
+      d.setAttribute("data-theme", t === "dark" ? "dark" : "light");
       d.classList.add("js");
     })();
   </script>
-  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <div class="grain" aria-hidden="true"></div>
 
   <header class="site-header">
-    <div class="wrap bar">
-      <a class="brand" href="index.html">Kartavya <em>Hirani</em></a>
+    <div class="wrap grid bar">
+      <a class="brand" href="index.html">Kartavya Hirani</a>
+      <span class="role">Developer</span>
+      <span class="clock-wrap" data-clock aria-label="Local time"></span>
       <nav class="nav" aria-label="Primary">
         <a href="projects.html">Projects</a>
         <a href="books.html">Books</a>
         <a href="movies.html">Movies</a>
         <a href="thoughts.html" aria-current="page">Thoughts</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"></button>
       </nav>
-      <div class="bar-meta">
-        <span class="clock" data-clock aria-label="Local time"></span>
-        <button class="theme-toggle" type="button" data-theme-toggle>Light</button>
-      </div>
     </div>
   </header>
 
   <main id="main">
-    <section class="page-head">
-      <div class="hero-light" aria-hidden="true"></div>
-      <div class="wrap">
-        <p class="crumb intro"><a href="index.html">~</a>/thoughts</p>
-        <h1 class="title intro" style="--d:140ms">Thoughts<span class="count" data-count>00</span></h1>
-        <p class="lede intro" style="--d:360ms">Notes, reflections, and half-finished ideas.</p>
-      </div>
+    <section class="wrap grid page-head">
+      <span class="idx label rise">(04) — Index / Thoughts</span>
+      <h1 class="rise" style="--d:80ms">Thoughts</h1>
+      <p class="blurb rise" style="--d:160ms">Notes, reflections, and half-finished ideas.</p>
+      <span class="count label rise" data-count style="--d:200ms"></span>
     </section>
-    <div class="wrap">
 
-      <section class="section">
-        <div class="section-head reveal"><span class="label">Notebook</span><span class="label">Newest first</span></div>
-        <ol class="rows entries">
-          <li class="row reveal">
-            <span class="n">I.</span>
-            <h2 class="t">The Value of Curiosity</h2>
-            <span class="side"><span class="d">Most people chase answers, but curiosity is about finding better questions. Sometimes the process of wondering is the point.</span><span class="m">November 2025</span></span>
-          </li>
-          <li class="row reveal">
-            <span class="n">II.</span>
-            <h2 class="t">Why I Like Building Things</h2>
-            <span class="side"><span class="d">Making something from scratch is a kind of clarity — it forces you to translate thought into form. That’s why I keep building.</span><span class="m">October 2025</span></span>
-          </li>
-          <!-- Add new thoughts at the top: copy an <li class="row reveal"> block. -->
-        </ol>
-      </section>
-    </div>
+    <section class="wrap block">
+      <ul class="list" data-entries>
+      <li class="entry grid rise">
+        <span class="date mono">2025.11</span>
+        <span class="t">The Value of Curiosity</span>
+        <span class="ex">Most people chase answers, but curiosity is about finding better questions. Sometimes the process of wondering is the point.</span>
+        <span class="go" aria-hidden="true">→</span>
+      </li>
+      <li class="entry grid rise">
+        <span class="date mono">2025.10</span>
+        <span class="t">Why I Like Building Things</span>
+        <span class="ex">Making something from scratch is a kind of clarity — it forces you to translate thought into form. That’s why I keep building.</span>
+        <span class="go" aria-hidden="true">→</span>
+      </li>
+        <!-- Add new thoughts at the top: copy an <li class="entry grid rise"> block. -->
+      </ul>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <span class="label reveal">Get in touch</span>
-      <ul class="reach">
-        <li class="reveal"><a href="#">Email<sup>↗</sup></a></li>
-        <li class="reveal"><a href="#">LinkedIn<sup>↗</sup></a></li>
-        <li class="reveal"><a href="#">GitHub<sup>↗</sup></a></li>
+    <div class="wrap grid foot">
+      <p class="big">Have an idea, a book or a film to recommend? <a href="#">Say hello ↗</a></p>
+      <ul class="col">
+        <li class="label">Elsewhere</li>
+        <li><a class="u" href="#">Email</a></li>
+        <li><a class="u" href="#">LinkedIn</a></li>
+        <li><a class="u" href="#">GitHub</a></li>
       </ul>
-      <div class="foot-base">
+      <ul class="col">
+        <li class="label">Index</li>
+        <li><a class="u" href="projects.html">Projects</a></li>
+        <li><a class="u" href="books.html">Books</a></li>
+        <li><a class="u" href="movies.html">Movies</a></li>
+        <li><a class="u" href="thoughts.html">Thoughts</a></li>
+      </ul>
+      <ul class="col">
+        <li class="label">Colophon</li>
+        <li>Hand-written HTML, CSS &amp; JS</li>
+        <li>Set in Switzer &amp; Geist Mono</li>
+      </ul>
+      <div class="foot-base mono">
         <span>© <span data-year>2026</span> Kartavya Hirani</span>
-        <nav aria-label="Footer">
-          <a href="index.html">Home</a>
-          <a href="projects.html">Projects</a>
-          <a href="books.html">Books</a>
-          <a href="movies.html">Movies</a>
-          <a href="thoughts.html">Thoughts</a>
-        </nav>
-        <span>Hand-written HTML, CSS &amp; JS · <kbd>T</kbd> theme</span>
+        <a class="u" href="#top">Back to top ↑</a>
       </div>
     </div>
   </footer>
