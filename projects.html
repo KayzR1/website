@@ -1,44 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects — Kartavya Hirani</title>
+  <meta name="description" content="Projects by Kartavya Hirani." />
+  <meta name="theme-color" content="#0a0a0b" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" />
   <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      var d = document.documentElement, t;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      d.setAttribute("data-theme", t);
+      d.classList.add("js");
+    })();
+  </script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Projects</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="books.html">Books</a>
-        <a href="movies.html">Movies</a>
-        <a href="thoughts.html">Thoughts</a>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html"><span class="ps">~/</span>kartavya</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html"><span class="k">01</span>home</a>
+        <a href="projects.html" aria-current="page"><span class="k">02</span>projects</a>
+        <a href="books.html"><span class="k">03</span>books</a>
+        <a href="movies.html"><span class="k">04</span>movies</a>
+        <a href="thoughts.html"><span class="k">05</span>thoughts</a>
       </nav>
+      <div class="bar-meta">
+        <span class="clock" data-clock aria-label="Local time">--:--:--</span>
+        <button class="theme-toggle" type="button" data-theme-toggle>[ dark ]</button>
+      </div>
     </div>
   </header>
 
-  <main class="container">
-    <section>
-      <article class="item">
-        <h3>Project One</h3>
-        <p>Description</p>
-        <a href="#" class="item-link">View more</a>
-      </article>
+  <main id="main">
+    <div class="wrap">
+      <section class="page-head">
+        <p class="crumb reveal"><a href="index.html">~</a>/projects</p>
+        <h1 class="title reveal">Projects<span class="count" data-count>00</span></h1>
+      </section>
 
-      <article class="item">
-        <h3>Project Two</h3>
-        <p>Description</p>
-        <a href="#" class="item-link">View more</a>
-      </article>
-    </section>
+      <section class="section">
+        <div class="section-head reveal"><span class="label">ls ./projects</span><span class="label">sorted: newest</span></div>
+        <ol class="rows entries">
+          <li class="row reveal">
+            <span class="n">01</span>
+            <div class="body">
+              <h2 class="t">Project One<span class="arrow" aria-hidden="true">↗</span></h2>
+              <p class="d">Description</p>
+              <div class="tags"><span class="tag">tag</span><span class="tag">tag</span></div>
+            </div>
+            <a class="m stretch" href="#">view more</a>
+          </li>
+          <li class="row reveal">
+            <span class="n">02</span>
+            <div class="body">
+              <h2 class="t">Project Two<span class="arrow" aria-hidden="true">↗</span></h2>
+              <p class="d">Description</p>
+              <div class="tags"><span class="tag">tag</span><span class="tag">tag</span></div>
+            </div>
+            <a class="m stretch" href="#">view more</a>
+          </li>
+        </ol>
+      </section>
+    </div>
   </main>
 
-  <footer>
-    <div class="container">
-      <p><a href="index.html">← Back to Home</a></p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <span class="label">contact</span>
+          <ul>
+            <li><a href="#">Email ↗</a></li>
+            <li><a href="#">LinkedIn ↗</a></li>
+            <li><a href="#">GitHub ↗</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="label">sitemap</span>
+          <ul>
+            <li><a href="projects.html">./projects</a></li>
+            <li><a href="books.html">./books</a></li>
+            <li><a href="movies.html">./movies</a></li>
+            <li><a href="thoughts.html">./thoughts</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="label">shortcuts</span>
+          <p><kbd>1</kbd>–<kbd>5</kbd> jump to page</p>
+          <p><kbd>T</kbd> toggle theme</p>
+        </div>
+      </div>
+      <div class="wordmark" aria-hidden="true">kartavya hirani</div>
+      <div class="foot-base">
+        <span>© <span data-year>2026</span> Kartavya Hirani</span>
+        <span>EOF</span>
+      </div>
     </div>
   </footer>
 </body>

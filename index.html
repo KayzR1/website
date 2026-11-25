@@ -1,39 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kartavya Hirani</title>
+  <meta name="description" content="Personal site of Kartavya Hirani — projects, books, movies and thoughts." />
+  <meta name="theme-color" content="#0a0a0b" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" />
   <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      var d = document.documentElement, t;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (!t) t = window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      d.setAttribute("data-theme", t);
+      d.classList.add("js");
+    })();
+  </script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Kartavya Hirani</h1>
-      <p class="tagline">
-        Welcome, I’m glad you found your way here.<br>
-        Maybe you came looking for something specific, or maybe you just wandered in.
-        Either way, I hope you leave with something that stays with you.
-      </p>
+  <a class="skip" href="#main">Skip to content</a>
 
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="books.html">Books</a>
-        <a href="movies.html">Movies</a>
-        <a href="thoughts.html">Thoughts</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="index.html"><span class="ps">~/</span>kartavya</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" aria-current="page"><span class="k">01</span>home</a>
+        <a href="projects.html"><span class="k">02</span>projects</a>
+        <a href="books.html"><span class="k">03</span>books</a>
+        <a href="movies.html"><span class="k">04</span>movies</a>
+        <a href="thoughts.html"><span class="k">05</span>thoughts</a>
       </nav>
+      <div class="bar-meta">
+        <span class="clock" data-clock aria-label="Local time">--:--:--</span>
+        <button class="theme-toggle" type="button" data-theme-toggle>[ dark ]</button>
+      </div>
     </div>
   </header>
 
+  <main id="main">
+    <div class="wrap">
+      <section class="hero">
+        <p class="cmd reveal"><span class="ps">$</span>whoami<span class="cursor" aria-hidden="true"></span></p>
+        <h1 class="display reveal">Kartavya<br /><span class="dim">Hirani</span></h1>
+        <p class="lede reveal">
+          Welcome, I’m glad you found your way here.
+          Maybe you came looking for something specific, or maybe you just wandered in.
+          Either way, I hope you leave with something that stays with you.
+        </p>
+        <p class="status reveal">
+          <span><i class="dot" aria-hidden="true"></i>online</span>
+          <span>status: building things</span>
+        </p>
+      </section>
 
-  <footer>
-    <div class="container">
-      <p>
-        <a href="#">Email</a> ·
-        <a href="#">LinkedIn</a> ·
-        <a href="#">GitHub</a>
-      </p>
+      <section class="section" aria-labelledby="index-label">
+        <div class="section-head reveal">
+          <span class="label" id="index-label">index</span>
+          <span class="label">04 dirs</span>
+        </div>
+        <ol class="rows">
+          <li class="reveal"><a class="row" href="projects.html"><span class="n">01</span><span class="body"><span class="t">Projects<span class="arrow" aria-hidden="true">→</span></span><span class="d">Things I’ve built.</span></span><span class="m">02 entries</span></a></li>
+          <li class="reveal"><a class="row" href="books.html"><span class="n">02</span><span class="body"><span class="t">Books<span class="arrow" aria-hidden="true">→</span></span><span class="d">What I’ve been reading.</span></span><span class="m">03 entries</span></a></li>
+          <li class="reveal"><a class="row" href="movies.html"><span class="n">03</span><span class="body"><span class="t">Movies<span class="arrow" aria-hidden="true">→</span></span><span class="d">Movies that stuck with me after the credits rolled.</span></span><span class="m">03 entries</span></a></li>
+          <li class="reveal"><a class="row" href="thoughts.html"><span class="n">04</span><span class="body"><span class="t">Thoughts<span class="arrow" aria-hidden="true">→</span></span><span class="d">Notes, reflections, and half-finished ideas.</span></span><span class="m">02 entries</span></a></li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <span class="label">contact</span>
+          <ul>
+            <li><a href="#">Email ↗</a></li>
+            <li><a href="#">LinkedIn ↗</a></li>
+            <li><a href="#">GitHub ↗</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="label">sitemap</span>
+          <ul>
+            <li><a href="projects.html">./projects</a></li>
+            <li><a href="books.html">./books</a></li>
+            <li><a href="movies.html">./movies</a></li>
+            <li><a href="thoughts.html">./thoughts</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="label">shortcuts</span>
+          <p><kbd>1</kbd>–<kbd>5</kbd> jump to page</p>
+          <p><kbd>T</kbd> toggle theme</p>
+        </div>
+      </div>
+      <div class="wordmark" aria-hidden="true">kartavya hirani</div>
+      <div class="foot-base">
+        <span>© <span data-year>2026</span> Kartavya Hirani</span>
+        <span>EOF</span>
+      </div>
     </div>
   </footer>
 </body>
