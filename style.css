@@ -153,17 +153,12 @@ main {
 }
 
 .bar .brand {
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 4;
     font-weight: 500;
 }
 
-.bar .role {
-    grid-column: 4 / span 3;
-    color: var(--muted);
-}
-
 .bar .clock-wrap {
-    grid-column: 7 / span 2;
+    grid-column: 5 / span 3;
     color: var(--muted);
     font-variant-numeric: tabular-nums;
 }
@@ -227,9 +222,9 @@ main {
 }
 
 .hero-info .intro {
-    grid-column: 1 / span 6;
-    font-size: clamp(1.2rem, 1.75vw, 1.6rem);
-    line-height: 1.3;
+    grid-column: 1 / span 9;
+    font-size: clamp(1.35rem, 2.45vw, 2.25rem);
+    line-height: 1.18;
     letter-spacing: -0.01em;
     text-indent: 3.5em;
 }
@@ -746,7 +741,6 @@ main {
    ========================================================================== */
 @media (max-width: 960px) {
     .bar .brand { grid-column: 1 / span 6; }
-    .bar .role,
     .bar .clock-wrap { display: none; }
     .bar .nav { grid-column: 7 / span 6; }
 
