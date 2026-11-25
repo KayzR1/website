@@ -1,6 +1,6 @@
 # website
 
-Personal site for kartavyahirani13.com, served by GitHub Pages. Plain HTML, CSS and a little JS: no build step.
+Personal site for kartavyahirani.com, served by GitHub Pages. Plain HTML, CSS and a little JS: no build step.
 
 - `style.css`: design tokens (dark and light themes) and all styles
 - `script.js`: live clock, theme toggle, `1`–`5` / `T` keyboard shortcuts, scroll reveal, entry counts
