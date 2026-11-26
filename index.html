@@ -1,217 +1,180 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Kartavya Hirani</title>
-  <meta name="description" content="Kartavya Hirani — projects, books, movies and thoughts." />
+  <meta name="description" content="Kartavya Hirani studies at UNC Chapel Hill and builds software: Frank, a study assistant you text, and Ember, a fire simulator for a Moon base." />
+  <meta name="theme-color" content="#0b0b0a" />
+  <meta property="og:title" content="Kartavya Hirani" />
+  <meta property="og:description" content="A study assistant you text, a fire simulator for a Moon base, and the books and films that stuck." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kartavyahirani.com/" />
+  <meta property="og:image" content="https://kartavyahirani.com/assets/share.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://kartavyahirani.com/" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&amp;display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400&amp;display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600&amp;family=Geist+Mono:wght@400&amp;family=Tiro+Devanagari+Sanskrit&amp;display=swap" />
   <link rel="stylesheet" href="style.css" />
-  <script>
-    (function () {
-      var d = document.documentElement, t;
-      try { t = localStorage.getItem("theme"); } catch (e) {}
-      d.setAttribute("data-theme", t === "light" ? "light" : "dark");
-      d.classList.add("js");
-    })();
-  </script>
-  <script src="script.js" defer></script>
+  <script>document.documentElement.classList.add('js','mo-js');setTimeout(function(){document.documentElement.classList.add('mo-safe')},2500)</script>
+  <link rel="modulepreload" href="assets/moments/moments.js" />
+  <link rel="modulepreload" href="assets/moments/lib.js" />
+  <link rel="modulepreload" href="assets/moments/pinned-chapters/moment.js" />
+  <script type="module" src="assets/moments/moments.js"></script>
+  <script type="module" src="script.js"></script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip" href="#work">Skip to content</a>
 
-  <header class="site-header">
-    <div class="wrap grid bar">
-      <a class="brand" href="index.html">Kartavya Hirani</a>
-      <span class="clock-wrap" data-clock aria-label="Local time"></span>
-      <nav class="nav" aria-label="Primary">
-        <a href="projects.html">Projects</a>
-        <a href="books.html">Books</a>
-        <a href="movies.html">Movies</a>
-        <a href="thoughts.html">Thoughts</a>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"></button>
+  <header class="nav">
+    <div class="wrap nav__bar">
+      <a class="nav__mark" href="#top" aria-label="Kartavya Hirani, back to top">KH</a>
+      <nav aria-label="Main">
+        <a class="ln" href="#work">Work</a>
+        <a class="ln" href="#shelf">Shelf</a>
+        <a class="ln" href="#notes">Notes</a>
+        <a class="ln" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <section class="wrap hero" id="top">
-      <h1 class="name" data-fit>Kartavya Hirani</h1>
-      <div class="grid hero-info">
-        <p class="intro rise" style="--d:250ms">
-          Welcome, I’m glad you found your way here.
-          Maybe you came looking for something specific, or maybe you just wandered in.
-          Either way, I hope you leave with something that stays with you.
-        </p>
-        <ul class="links rise" style="--d:400ms">
-          <li class="label">Elsewhere</li>
-          <li><a class="u" href="#">Email ↗</a></li>
-          <li><a class="u" href="#">LinkedIn ↗</a></li>
-          <li><a class="u" href="#">GitHub ↗</a></li>
+  <main id="top">
+    <!-- The page's one effect: dot-terrain (dealt), a laser-scan of rolling land, calm under the words. -->
+    <section class="hero" aria-labelledby="hero-h">
+      <div class="hero__ground" data-fx="dot-terrain" data-fx-seed="1126"
+           data-fx-params='{"horizon":0.3,"calmX":0.28,"calmY":0.78,"calm":0.95,"speed":0.06,"spacing":13,"crest":0.9}'></div>
+      <div class="wrap hero__inner">
+        <h1 id="hero-h" class="enter" style="--i:0">Kartavya Hirani</h1>
+        <div class="hero__foot">
+          <p class="hero__lead enter" style="--i:1">I study at UNC Chapel Hill and build software on the side. Lately: a study assistant you text, and a fire simulator for a base on the Moon.</p>
+          <div class="btns enter" style="--i:2">
+            <a class="btn btn--solid" href="#work">See the work</a>
+            <a class="btn btn--ghost" href="https://github.com/KayzR1" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Moment (dealt): pinned-chapters. The section holds while three chapters open one at a time. -->
+    <section class="section" id="work" style="--h: 2" data-moment="pinned-chapters" aria-labelledby="work-h">
+      <div class="wrap mo-pc__grid">
+        <div class="mo-pc__text">
+          <h2 id="work-h">What I’ve built</h2>
+          <ol class="mo-pc__steps">
+            <li class="mo-pc__step">
+              <h3>Frank: your Canvas, by text</h3>
+              <p>An iMessage assistant for UNC students. Ask what’s due or what you need on the final; it reads your Canvas, answers in a few lines and texts you before deadlines. <a class="ln ln--on" href="https://kayzr1.github.io/frankwebsite/" target="_blank" rel="noopener">Visit Frank ↗</a></p>
+              <figure class="mo-pc__visual"><img src="assets/frank.jpg" alt="Frank's website: the headline “Know where you stand in every class” beside a phone showing a morning brief by text" width="1440" height="1080" /></figure>
+            </li>
+            <li class="mo-pc__step">
+              <h3>Ember: fire safety for a Moon base</h3>
+              <p>Built with four teammates for NASA Space Apps 2026, on ISS combustion data. I wrote the Red and Blue agents that hunt for the hardest fire to detect, and the 3D habitat. <a class="ln ln--on" href="https://ember-murex-gamma.vercel.app/" target="_blank" rel="noopener">Open Ember ↗</a></p>
+              <figure class="mo-pc__visual"><img src="assets/ember.jpg" alt="Ember's mission setup panel next to a 3D Moon with a habitat on its surface" width="1440" height="1080" /></figure>
+            </li>
+            <li class="mo-pc__step">
+              <h3>Where it started: browser games</h3>
+              <p>A T-Rex runner, Angry Birds, a car race, a virtual pet. Seventy-odd small repos since 2020, most of them a weekend each. <a class="ln ln--on" href="https://github.com/KayzR1?tab=repositories" target="_blank" rel="noopener">All repos ↗</a></p>
+              <figure class="mo-pc__visual mo-pc__visual--lit" role="img" aria-label="A list of early repositories from 2020 and 2021: Trex-Game, Monkey-Go-Happy, Car-Racing-Game, AngryBirds3 and more">
+                <div class="repos" aria-hidden="true">
+                  <div class="repos__bar"><i></i><i></i><i></i><span>github.com/KayzR1</span></div>
+                  <ul>
+                    <li><span>Trex-Game</span><span>JavaScript</span><span>2020</span></li>
+                    <li><span>Monkey-Go-Happy</span><span>JavaScript</span><span>2020</span></li>
+                    <li><span>Car-sim-1</span><span>JavaScript</span><span>2020</span></li>
+                    <li><span>AngryBirds3</span><span>JavaScript</span><span>2021</span></li>
+                    <li><span>Wrecking-Ball</span><span>JavaScript</span><span>2021</span></li>
+                    <li><span>Kill-The-Monster</span><span>JavaScript</span><span>2021</span></li>
+                    <li><span>Car-Racing-Game</span><span>JavaScript</span><span>2021</span></li>
+                    <li><span>Newton-s-Cradle</span><span>JavaScript</span><span>2021</span></li>
+                    <li><span>Virtual-Pet</span><span>JavaScript</span><span>2021</span></li>
+                    <li><span>guessing-game</span><span>Python</span><span>2022</span></li>
+                  </ul>
+                </div>
+              </figure>
+            </li>
+          </ol>
+        </div>
+        <div class="mo-pc__visuals"></div>
+      </div>
+    </section>
+
+    <section class="section" id="shelf" aria-labelledby="shelf-h">
+      <div class="wrap">
+        <div class="head">
+          <h2 id="shelf-h">Books and films that stuck</h2>
+          <p class="head__note">Two of each, for now.</p>
+        </div>
+        <ul class="shelf">
+          <li>
+            <article class="cover cover--1984" aria-label="1984 by George Orwell, 1949">
+              <span class="cover__top"><span>Book</span><span>1949</span></span>
+              <span class="cover__big" aria-hidden="true">1984</span>
+              <span class="cover__by">George Orwell</span>
+            </article>
+          </li>
+          <li>
+            <article class="cover cover--gita" aria-label="Bhagavad Gita, attributed to Vyasa">
+              <span class="cover__top"><span>Book</span><span>Sanskrit</span></span>
+              <span class="cover__dev" lang="sa" aria-hidden="true">भगवद्गीता</span>
+              <span class="cover__title" aria-hidden="true">Bhagavad Gita</span>
+              <span class="cover__by">Vyasa</span>
+            </article>
+          </li>
+          <li>
+            <article class="cover cover--spidey" aria-label="Spider-Man: Brand New Day, directed by Destin Daniel Cretton, 2026">
+              <span class="cover__top"><span>Film</span><span>2026</span></span>
+              <span class="cover__title cover__title--film" aria-hidden="true">Spider-Man: Brand New Day</span>
+              <span class="cover__by">Dir. Destin Daniel Cretton</span>
+            </article>
+          </li>
+          <li>
+            <article class="cover cover--hunger" aria-label="The Hunger Games, directed by Gary Ross, 2012">
+              <span class="cover__top"><span>Film</span><span>2012</span></span>
+              <span class="cover__title cover__title--film" aria-hidden="true">The Hunger Games</span>
+              <span class="cover__by">Dir. Gary Ross</span>
+            </article>
+          </li>
         </ul>
       </div>
     </section>
 
-    <section class="wrap block">
-    <div class="block-head grid rise">
-      <span class="idx label">(01)</span>
-      <h2>Projects</h2>
-      <p class="blurb">Things I’ve built.</p>
-      <a class="more u mono" href="projects.html">All projects →</a>
-    </div>
-      <ul class="grid tiles">
-      <li class="rise">
-        <a class="tile" href="https://ember-murex-gamma.vercel.app/" target="_blank" rel="noopener">
-          <div class="shot"><img src="assets/ember.jpg" alt="Ember's mission setup screen beside a 3D model of a Moon base" loading="lazy" width="1440" height="1080" /></div>
-          <div class="cap">
-            <span class="file mono">01_EMBER.JPG</span>
-            <span class="t">Ember</span>
-            <span class="y mono">2026</span>
-            <span class="d">A fire-safety dashboard and adversarial simulator for Moon and Mars habitats, built on NASA ISS combustion data. Built with a team for the NASA Space Apps Challenge 2026; I wrote the Red, Blue and Ghost Flame agents and the 3D habitat and planet.</span>
-            <span class="tags"><span class="tag">React</span><span class="tag">three.js</span><span class="tag">Python</span><span class="tag">FastAPI</span></span>
-            <span class="go mono">Live site ↗</span>
-          </div>
-        </a>
-      </li>
-      <li class="rise">
-        <a class="tile" href="https://kayzr1.github.io/frankwebsite/" target="_blank" rel="noopener">
-          <div class="shot"><img src="assets/frank.jpg" alt="Frank's landing page with an example text conversation about grades" loading="lazy" width="1440" height="1080" /></div>
-          <div class="cap">
-            <span class="file mono">02_FRANK.JPG</span>
-            <span class="t">Frank</span>
-            <span class="y mono">2026</span>
-            <span class="d">A study assistant for UNC students that you text. It reads your Canvas and answers what’s due, what you need on the final and what the syllabus says, and texts you before deadlines.</span>
-            <span class="tags"><span class="tag">TypeScript</span><span class="tag">Bun</span><span class="tag">iMessage</span><span class="tag">Canvas API</span><span class="tag">SQLite</span></span>
-            <span class="go mono">Website ↗</span>
-          </div>
-        </a>
-      </li>
-      </ul>
+    <section class="section" id="notes" aria-labelledby="notes-h">
+      <div class="wrap">
+        <div class="head">
+          <h2 id="notes-h">Notes</h2>
+          <p class="head__note">Reflections and half-finished ideas.</p>
+        </div>
+        <ol class="notes">
+          <li class="note">
+            <time class="note__date" datetime="2025-11">Nov 2025</time>
+            <h3>The value of curiosity</h3>
+            <p>Most people chase answers, but curiosity is about finding better questions. Sometimes the process of wondering is the point.</p>
+          </li>
+          <li class="note">
+            <time class="note__date" datetime="2025-10">Oct 2025</time>
+            <h3>Why I like building things</h3>
+            <p>Making something from scratch is a kind of clarity. It forces you to translate thought into form. That’s why I keep building.</p>
+          </li>
+        </ol>
+      </div>
     </section>
 
-    <div class="wrap grid split">
-      <section class="block">
-    <div class="block-head grid rise">
-      <span class="idx label">(02)</span>
-      <h2>Books</h2>
-      <p class="blurb">What I’ve been reading.</p>
-      <a class="more u mono" href="books.html">Bookshelf →</a>
-    </div>
-        <ul class="grid shelf">
-      <li class="rise">
-        <div class="cover" style="--c:#7d1d1a;--ink:#f3e7dc">
-          <span class="ca">No. 01</span>
-          <div>
-            <span class="ct">1984</span>
-            <div class="rule"></div>
-            <span class="ca">George Orwell</span>
-          </div>
+    <section class="close" id="contact" aria-labelledby="contact-h">
+      <div class="wrap">
+        <h2 id="contact-h">Making something? <span>Tell me about it.</span></h2>
+        <div class="btns">
+          <a class="btn btn--solid" href="https://github.com/KayzR1" target="_blank" rel="noopener">Find me on GitHub <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="under"><span class="t">1984</span><span class="mono muted">1949</span></div>
-        <div class="by muted">George Orwell</div>
-      </li>
-      <li class="rise">
-        <div class="cover" style="--c:#b06d24;--ink:#1c1309">
-          <span class="ca">No. 02</span>
-          <div>
-            <span class="ct">Bhagavad Gita</span>
-            <div class="rule"></div>
-            <span class="ca">Vyasa</span>
-          </div>
-        </div>
-        <div class="under"><span class="t">Bhagavad Gita</span><span class="mono muted">Sanskrit</span></div>
-        <div class="by muted">Vyasa</div>
-      </li>
-        </ul>
-      </section>
-      <section class="block">
-    <div class="block-head grid rise">
-      <span class="idx label">(03)</span>
-      <h2>Movies</h2>
-      <p class="blurb">Movies that stuck with me after the credits rolled.</p>
-      <a class="more u mono" href="movies.html">Watchlist →</a>
-    </div>
-        <ul class="grid shelf">
-      <li class="rise">
-        <div class="poster" style="--c:#3a0f12">
-          <div class="pm"><span>01</span><span>2026</span></div>
-          <div>
-            <span class="pt">Spider-Man: Brand New Day</span>
-            <div class="pm" style="margin-top:.6rem"><span>Dir. Destin Daniel Cretton</span></div>
-          </div>
-        </div>
-        <div class="under"><span class="t">Spider-Man: Brand New Day</span><span class="mono muted">2026</span></div>
-        <div class="by muted">Destin Daniel Cretton</div>
-      </li>
-      <li class="rise">
-        <div class="poster" style="--c:#2e2416">
-          <div class="pm"><span>02</span><span>2012</span></div>
-          <div>
-            <span class="pt">The Hunger Games</span>
-            <div class="pm" style="margin-top:.6rem"><span>Dir. Gary Ross</span></div>
-          </div>
-        </div>
-        <div class="under"><span class="t">The Hunger Games</span><span class="mono muted">2012</span></div>
-        <div class="by muted">Gary Ross</div>
-      </li>
-        </ul>
-      </section>
-    </div>
-
-    <section class="wrap block">
-    <div class="block-head grid rise">
-      <span class="idx label">(04)</span>
-      <h2>Thoughts</h2>
-      <p class="blurb">Notes, reflections, and half-finished ideas.</p>
-      <a class="more u mono" href="thoughts.html">All notes →</a>
-    </div>
-      <ul class="list">
-      <li class="entry grid rise">
-        <span class="date mono">2025.11</span>
-        <span class="t">The Value of Curiosity</span>
-        <span class="ex">Most people chase answers, but curiosity is about finding better questions. Sometimes the process of wondering is the point.</span>
-        <span class="go" aria-hidden="true">→</span>
-      </li>
-      <li class="entry grid rise">
-        <span class="date mono">2025.10</span>
-        <span class="t">Why I Like Building Things</span>
-        <span class="ex">Making something from scratch is a kind of clarity — it forces you to translate thought into form. That’s why I keep building.</span>
-        <span class="go" aria-hidden="true">→</span>
-      </li>
-      </ul>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap grid foot">
-      <p class="big">Have an idea, a book or a film to recommend? <a href="#">Say hello ↗</a></p>
-      <ul class="col">
-        <li class="label">Elsewhere</li>
-        <li><a class="u" href="#">Email</a></li>
-        <li><a class="u" href="#">LinkedIn</a></li>
-        <li><a class="u" href="#">GitHub</a></li>
-      </ul>
-      <ul class="col">
-        <li class="label">Index</li>
-        <li><a class="u" href="projects.html">Projects</a></li>
-        <li><a class="u" href="books.html">Books</a></li>
-        <li><a class="u" href="movies.html">Movies</a></li>
-        <li><a class="u" href="thoughts.html">Thoughts</a></li>
-      </ul>
-      <ul class="col">
-        <li class="label">Colophon</li>
-        <li>Hand-written HTML, CSS &amp; JS</li>
-        <li>Set in Switzer &amp; Geist Mono</li>
-      </ul>
-      <div class="foot-base mono">
-        <span>© <span data-year>2026</span> Kartavya Hirani</span>
-        <a class="u" href="#top">Back to top ↑</a>
-      </div>
+  <footer class="foot">
+    <div class="wrap foot__bar">
+      <span>© <span data-year>2026</span> Kartavya Hirani</span>
+      <span>Written by hand in HTML, CSS and a little JavaScript</span>
     </div>
   </footer>
 </body>

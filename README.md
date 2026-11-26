@@ -1,17 +1,17 @@
 # website
 
-Personal site for kartavyahirani.com. Plain HTML, CSS and a little JS: no build step.
+Personal site for kartavyahirani.com: one dark page, plain HTML, CSS and a little JS, no build step. Vercel deploys `main`.
 
-- `style.css`: light/dark tokens, the 12-column grid and all styles. Fonts: Switzer (Fontshare) and Geist Mono (Google Fonts).
-- `script.js`: clock, theme toggle, fitting the hero name to the page width, entry counts, fade-in on scroll.
-- `favicon.svg`: site icon.
+- `index.html`: the whole site. Sections: hero, Work, Shelf, Notes, Contact.
+- `style.css`: tokens at the top, then each section.
+- `script.js`: mounts the hero's dot-terrain ground, the nav's scrolled state, the year.
+- `assets/fx/`: the WebGL dot-terrain effect (shows one still frame under reduced motion; a CSS fallback without WebGL).
+- `assets/moments/`: the pinned-chapters scroll moment used by Work (desktop only; phones and reduced motion get static rows).
+- `assets/frank.jpg`, `assets/ember.jpg`: screenshots of the live sites. `assets/share.jpg`: link preview image.
+- `projects.html`, `books.html`, `movies.html`, `thoughts.html`: redirects to the matching section, for old links.
 
-## Editing content
+## Editing
 
-- **Projects**: copy an `<li class="rise">` tile in `projects.html` (and the home page). To use a real screenshot, replace the `<div class="editor">…</div>` inside `.shot` with `<img src="…" alt="…">`.
-- **Books / Movies**: copy an `<li class="rise">` cover or poster. Change the colour with `--c` (background) and, for books, `--ink` (text). Fill in author/director and year where the `—` dashes are.
-- **Thoughts**: copy an `<li class="entry grid rise">` row, newest first.
-- The home page shows a preview of each section, so add new entries there too.
-- The count next to each page title updates automatically.
-- **Clock timezone**: set `TIMEZONE` at the top of `script.js` (e.g. `"Asia/Kolkata"`). Left null, it shows the visitor's local time.
-- **Contact links**: Email / LinkedIn / GitHub and "Say hello" are still `#`.
+- **A project**: copy an `<li class="mo-pc__step">` in `#work` (2 to 4 steps fit). Each needs a title, a short paragraph and one picture (4:3).
+- **A book or film**: copy an `<li>` in `.shelf` and give the cover a modifier class with its colours in `style.css`.
+- **A note**: copy an `<li class="note">` in `.notes`.
